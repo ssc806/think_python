@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet" id="bootstrap-css">
+    <link href="/assets/css/think_python.css" rel="stylesheet">
+
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCdEGo6UWHNu3yvlLykDGtSwwuTpjVgvaY"></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <div id="map-title">
+            <h1>Show the traffic cameras on google map</h1>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span4"></div>
+        <div id="div-search-form" class="span4">
+          <form id="custom-search-form" class="form-search form-horizontal pull-right" action="/search/" method="get">
+            <div class="input-append">
+                <input type="text" name="search_box" class="search-query" placeholder="Search">
+                <button type="submit" class="btn"><i class="icon-search"></i></button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="span12">
+          <div id="map"></div>
+        </div> 
+      </div>
+    </div>
+
+    <script>
+        var allLocations = {{ location_list_json | safe }};
+    </script>
+    <script src="/assets/js/camera_locations.js"></script>
+  </body>
+</html>

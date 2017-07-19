@@ -1,0 +1,29 @@
+
+html {
+  height: 100%
+}
+body {
+  height: 100%; 
+  background-color:#385f9e
+}
+
+/*To align with the ajax popup alert window*/
+#div-search-form {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+#map-title {
+  text-align: center;
+  color:white;
+}
+
+#map {  
+  height: 560px; 
+  padding: 20px; 
+  border: 2px solid #CCC; 
+  margin-bottom: 20px
+}
+
+
+    
